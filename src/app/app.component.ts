@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ms-posts-spa';
+  storedPosts = [];
+
+  OnPostAdded(post) {
+    this.storedPosts.push(post);
+  }
 }
