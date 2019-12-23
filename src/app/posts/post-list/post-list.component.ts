@@ -22,7 +22,7 @@ private postsSub: Subscription;
   constructor(private postsService: PostsService) {}
 
   ngOnInit() {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts();
     this.postsService.getPostUpdateListener()
       .subscribe((posts: Post[]) => {
           this.posts = posts;
